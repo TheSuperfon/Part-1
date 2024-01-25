@@ -35,6 +35,16 @@ public class Car : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        forwardSpeed += 100;
+        if (steeringSpeed >= 350)
+        {
+            steeringSpeed += 15;
+        }
+        maxSpeed += 100;
+        Debug.Log(maxSpeed);
+    }
 
 
 
