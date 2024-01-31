@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Puck : MonoBehaviour
 {
-    public float topSpeed = 90;
-    public float puckTurn = 0;
-    public float puckSpeed = 140;
+    public float topSpeed = 140; //
+    public float puckSpeed = 400;
     Rigidbody2D puckbody;
 
     public GameObject NewPuck;
@@ -27,20 +26,17 @@ public class Puck : MonoBehaviour
     
         private void FixedUpdate()
         {
-            //puckbody.AddTorque(Time.deltaTime);
-            Vector2 MovePuck = transform.up * 1 * puckSpeed * Time.deltaTime; //is the force that pushes the puck in the forward direction
-            if (puckbody.velocity.magnitude < topSpeed) // 
-            {
-                puckbody.AddForce(MovePuck); //adds force to rigid body that allows the puck to move
-            }
-            
-        }
+            Vector2 MovePuck = transform.up * puckSpeed * Time.deltaTime; //is the force that pushes the puck in the forward direction
+        /*if (puckbody.velocity.magnitude < topSpeed) //
+        {
+            puckbody.AddForce(MovePuck); //adds force to rigid body that allows the puck to move
+        }*/
+            puckbody.AddForce(MovePuck); //adds force to rigid body that allows the puck to move
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        puckSpeed *= -1;
-        topSpeed += 20;
-        puckSpeed += 40;
+        puckSpeed *= -1;//reverses movement of puck
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

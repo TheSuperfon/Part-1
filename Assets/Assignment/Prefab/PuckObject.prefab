@@ -114,7 +114,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 6
 --- !u!58 &8420719447862238685
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -163,8 +163,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   topSpeed: 90
-  puckTurn: 10
-  puckSpeed: 90
+  puckSpeed: 400
+  NewPuck: {fileID: 0}
+  NewSpawn: {fileID: 0}
 --- !u!1 &2642281145683740238
 GameObject:
   m_ObjectHideFlags: 0
