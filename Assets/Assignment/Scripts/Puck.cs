@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Puck : MonoBehaviour
 {
-    public float topSpeed = 140; //
-    public float puckSpeed = 400;
-    Rigidbody2D puckbody;
+    public float puckSpeed = 400; //puck's speed
+    Rigidbody2D puckbody; //puck's rigidbody assigned a variable
 
     public GameObject NewPuck;
     public Transform NewSpawn;
@@ -27,10 +26,6 @@ public class Puck : MonoBehaviour
         private void FixedUpdate()
         {
             Vector2 MovePuck = transform.up * puckSpeed * Time.deltaTime; //is the force that pushes the puck in the forward direction
-        /*if (puckbody.velocity.magnitude < topSpeed) //
-        {
-            puckbody.AddForce(MovePuck); //adds force to rigid body that allows the puck to move
-        }*/
             puckbody.AddForce(MovePuck); //adds force to rigid body that allows the puck to move
     }
 
