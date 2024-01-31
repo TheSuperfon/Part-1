@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9215015842334542875}
   - component: {fileID: 8420719447862238685}
   - component: {fileID: 9116065550443551950}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PuckObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fea0445db718bb443add9a208d910b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  topSpeed: 90
   puckSpeed: 400
   NewPuck: {fileID: 0}
   NewSpawn: {fileID: 0}
@@ -176,7 +175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3851132885089200632}
   - component: {fileID: 1216383416408674657}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PuckMiddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

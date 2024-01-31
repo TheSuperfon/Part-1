@@ -31,15 +31,18 @@ public class Puck : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
         puckSpeed *= -1;//reverses movement of puck
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
+
         Instantiate(NewPuck, NewSpawn.position, NewSpawn.rotation);
-
-
         Destroy(gameObject);
+
+
     }
 
 

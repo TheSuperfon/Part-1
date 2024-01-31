@@ -6,7 +6,6 @@ using UnityEngine;
 public class Paddle : MonoBehaviour
 {
     float UpAndDown;
-    //float Rotation;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +16,9 @@ public class Paddle : MonoBehaviour
     void Update()
     {
         UpAndDown = Input.GetAxis("Vertical");
-        //Rotation = Input.GetAxis("Horizontal");
-        transform.Translate(0, UpAndDown * 10 * Time.deltaTime, 0);
-        //transform.Rotate(Vector3.forward, Rotation * 50 * Time.deltaTime);
+        
 
+
+        transform.Translate(0, UpAndDown * 8 * Time.deltaTime, 0);
     }
 }
