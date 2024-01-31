@@ -17,21 +17,17 @@ public class NewSpawn : MonoBehaviour
         UpAndDown = Input.GetAxis("Vertical");
         if (transform.position.y >= 0)
         {
-            transform.Translate(-UpAndDown * 18 * Time.deltaTime, 0, 0);
+            transform.Translate(-UpAndDown * 18 * Time.deltaTime, 0, 0);//moves it opposite to the puck and offsets it by a lot
 
         }
         if (transform.position.y < 0)
         {
-            transform.Translate(-UpAndDown * 10 * Time.deltaTime, 0, 0);
+            transform.Translate(-UpAndDown * 10 * Time.deltaTime, 0, 0);//moves it opposite to the puck and offsets it by a bit
 
         }
 
-        //transform.Translate(-UpAndDown * 20 * Time.deltaTime, 0, 0);
+        
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        UpAndDown *= -4;
-        Debug.Log("yo");
-    }
+    
 }
